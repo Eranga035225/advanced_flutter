@@ -1,19 +1,16 @@
-void main() async{
-
+void main() async {
   print(1);
-  final userName = await generateUserName();
-
-  print(userName);
-
-
-
-
-
-
-}
-
-Future<String> generateUserName(){
-  return Future.delayed(Duration(seconds: 2),(){
-   return 'kamal';
+  final name =  await Future.delayed(Duration(seconds: 4), (){
+    return "Hello";
   });
+  print(name);
+
+
+
+
+
+
+
 }
+
+
