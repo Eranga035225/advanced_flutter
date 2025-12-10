@@ -1,9 +1,6 @@
-Future<void> main() async {
+void main(){
   print(1);
-  final name =  await Future.delayed(Duration(seconds: 4), (){
-    return "Hello";
-  });
-  print(name);
+  getName();
 
 
 
@@ -13,4 +10,12 @@ Future<void> main() async {
 
 }
 
+Future<void> getName() async{
+  String name = await Future.delayed(Duration(seconds: 3), (){
+     return 'KAMAL';
+  });
+  print(name);
+ 
+
+}
 
