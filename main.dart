@@ -11,10 +11,17 @@ void main(){
 }
 
 Future<void> getName() async{
-  String name = await Future.delayed(Duration(seconds: 3), (){
-     return 'KAMAL';
+  try {
+      String name = await Future.delayed(Duration(seconds: 3), (){
+    throw Exception();
   });
   print(name);
+    
+  } catch (e) {
+    
+    print(e);
+  }
+
  
 
 }
